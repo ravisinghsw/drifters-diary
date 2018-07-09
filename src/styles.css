@@ -9,20 +9,6 @@
   }
 
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {
-  float: left;
-  width: 70%;
-  padding-left: 20px;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 25px;
-}
 
 /* Fake image */
 .fakeimg {
@@ -37,12 +23,7 @@
   margin-top: 20px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+
 
 /* Footer */
 .footer {
