@@ -4,6 +4,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -12,6 +13,8 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { ContactComponent } from './contact/contact.component';
 import { ArticleComponent } from './article/article.component';
 import { AddsAndEventsComponent } from './adds-and-events/adds-and-events.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +25,15 @@ import { AddsAndEventsComponent } from './adds-and-events/adds-and-events.compon
     CarouselComponent,
     ContactComponent,
     ArticleComponent,
-    AddsAndEventsComponent
+    AddsAndEventsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
