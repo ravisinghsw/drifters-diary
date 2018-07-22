@@ -15,6 +15,7 @@ import { ArticleComponent } from './article/article.component';
 import { AddsAndEventsComponent } from './adds-and-events/adds-and-events.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     HttpClientModule,
     AngularFontAwesomeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LazyLoadImagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
