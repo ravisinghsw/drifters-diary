@@ -16,6 +16,8 @@ import { AddsAndEventsComponent } from './adds-and-events/adds-and-events.compon
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
+import { TreksComponent } from './treks/treks.component';
+import { ArticlesComponent } from './articles/articles.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
     ContactComponent,
     ArticleComponent,
     AddsAndEventsComponent,
-    HomeComponent
+    HomeComponent,
+    TreksComponent,
+    ArticlesComponent
   ],
   imports: [
     BrowserModule,
