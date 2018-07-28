@@ -34,7 +34,7 @@ import { ArticlesComponent } from './articles/articles.component';
     ArticlesComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'driftersdiaries' }),
     FormsModule,
     HttpClientModule,
     AngularFontAwesomeModule,
