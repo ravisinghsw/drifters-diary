@@ -18,6 +18,9 @@ import { HomeComponent } from './home/home.component';
 import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
 import { TreksComponent } from './treks/treks.component';
 import { ArticlesComponent } from './articles/articles.component';
+import { ContributeComponent } from './contribute/contribute.component';
+import { HelplineComponent } from './helpline/helpline.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { ArticlesComponent } from './articles/articles.component';
     AddsAndEventsComponent,
     HomeComponent,
     TreksComponent,
-    ArticlesComponent
+    ArticlesComponent,
+    ContributeComponent,
+    HelplineComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'driftersdiaries' }),

@@ -6,6 +6,9 @@ import { HomeComponent} from './home/home.component';
 import { ArticleComponent} from './article/article.component';
 import {TreksComponent} from './treks/treks.component';
 import {ArticlesComponent} from './articles/articles.component';
+import {ReviewsComponent} from './reviews/reviews.component';
+import {HelplineComponent} from './helpline/helpline.component';
+import {ContributeComponent} from './contribute/contribute.component';
 
 
 const routes: Routes = [
@@ -13,6 +16,9 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'articles', component: ArticlesComponent },
   { path: 'treks', component: TreksComponent },
+  { path: 'reviews', component: ReviewsComponent },
+  { path: 'helpline', component: HelplineComponent },
+  { path: 'contribute', component: ContributeComponent },
   { path: 'articles/grahan', component: ArticleComponent },
 ];
 
