@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import {Author} from '../domain/Author';
 
 @Component({
   selector: 'app-contribute',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contribute.component.css']
 })
 export class ContributeComponent implements OnInit {
+
+  private _author = new Author();
 
   constructor() { }
 

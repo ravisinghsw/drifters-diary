@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ArticleService} from '../services/article.service';
-import {Article} from './article';
+import {Article} from '../domain/Article';
+
 
 @Component({
   selector: 'app-article',
@@ -9,7 +10,7 @@ import {Article} from './article';
 })
 export class ArticleComponent implements OnInit {
 
-  articles: Article[] ;
+  article: Article ;
   title: string;
 
   constructor(private articleService: ArticleService) { }
@@ -20,6 +21,6 @@ export class ArticleComponent implements OnInit {
   }
 
   private getArticles() {
-    this.articles = this.articleService.getArticles();
+    this.article = this.articleService.getArticle();
   }
 }

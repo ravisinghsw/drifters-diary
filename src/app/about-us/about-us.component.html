@@ -1,20 +1,26 @@
 <div class="card media border p-3 well" lazy-load-images>
   <h5>About Me</h5>
   <div class="media-body">
-    <img src="../../assets/images/IMG_0477.JPG"
+    <img src="{{author.profilePicUrl}}"
          alt="Ravi"  class="img-thumbnail">
   </div>
     <div class="media-body">
-      <h6>Ravi Singh </h6>
-      <p>Travel Blogger</p>
+      <h6>{{author.name}}</h6>
+      <p>{{author.briefInformation}}</p>
     </div>
 </div>
 
-<div class="card  media border p-3 well">
-  <div class="media-body">
-    <h5>Let's Connect</h5>
-    <a href="https://www.facebook.com/ravi.singhsw"  target="_blank" rel="noopener"> <i class="p-2 fa fa-facebook-official fa-2x mx-auto" style="" ></i> </a>
-    <a href="https://plus.google.com/u/0/102843333311851835463" target="_blank" rel="noopener"> <i class="p-2 fa fa-google-plus fa-2x mx-auto" style=""></i></a>
-    <a href="https://www.youtube.com/channel/UCEo2Yu6yleHu1wloUPVpEMQ" target="_blank" rel="noopener"><i class="p-2 fa fa-youtube-square fa-2x " style=""></i></a>
-  </div>
+<div class="card  media border p-4 well">
+  <h5>Let's Connect</h5>
+  <nav class="navbar-expand-sm  justify-content-center">
+  <ul class="navbar-nav">
+      <div class="media-body " fxLayout="row" fxLayoutAlign="space-evenly center" *ngFor="let connect of author.letsConnect" >
+      <li >
+        <a href="{{connect.socialMediaUrl}}"  target="_blank" rel="noopener" >
+          <i class="{{socialMediaCss.getSocialMediaCss(connect.socialMedia)}}" ></i>
+        </a>
+      </li>
+      </div>
+  </ul>
+  </nav>
 </div>

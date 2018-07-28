@@ -21,6 +21,9 @@ import { ArticlesComponent } from './articles/articles.component';
 import { ContributeComponent } from './contribute/contribute.component';
 import { HelplineComponent } from './helpline/helpline.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import {SocialMediaCSS} from './utility/SocialMediaCSS';
+import {SEOServiceService} from './services/seoservice.service';
 
 @NgModule({
   declarations: [
@@ -45,9 +48,10 @@ import { ReviewsComponent } from './reviews/reviews.component';
     HttpClientModule,
     AngularFontAwesomeModule,
     AppRoutingModule,
-    LazyLoadImagesModule
+    LazyLoadImagesModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [SocialMediaCSS, SEOServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
