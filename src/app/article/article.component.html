@@ -5,60 +5,31 @@
     <div class="col-sm-7 ">
       <div class="card h-100" >
         <!-- Title -->
-        <h1 class="mt-4">Grahan .. a hidden gem of Himachal Pradesh</h1>
+        <h1 class="mt-4">{{article.title}}</h1>
         <!-- Author -->
         <p class="lead">
           by
-          <a href="#">Ravi Singh</a>
+          <a href="#">{{article.author.name}}</a>
         </p>
         <hr>
         <!-- Date/Time -->
-        <p>Posted on April 5, 2018 at 12:00 PM</p>
+        <p>Posted on {{article.createdTime}}</p>
         <hr>
         <!-- Preview Image -->
-        <img style="height: 350px" src="../../assets/images/articles/grahan.jpg"
+        <img style="height: 350px" src="{{article.articleImage}}"
              alt="Generic placeholder image">
+        <p class="lead">{{article.articleBrief}}</p>
+        <li style="list-style-type: none;" *ngFor="let paragraph of article.articleDocument.paragraphs" >
+          <p>{{paragraph.paragraph}}</p>
+          <blockquote class="blockquote" *ngIf='paragraph.imageUrl'>
+            <img style="height: 300px" src="{{paragraph.imageUrl}}"
+                 alt="Generic placeholder image">
+            <footer class="blockquote-footer" *ngIf='paragraph.imageDestination'>{{paragraph.imageDestination}}
+            </footer>
+          </blockquote>
+        </li>
         <hr>
-
-        <p class="lead"> How often do you get a chance to wake up to the chirping of birds and view of the giantic Himalayas ?
-          Well , Let me take you to the Grahan , My last trekking destination to make that experience as feeling.
-         </p>
-
-        <p>"Life is not about the final moment but its about the journey we take to reach the destination". And I realized this when booked the bus ticket to Kullu from Delhi from March 30 ,2018</p>
-
-        <p>The HRTC bus departed at 7:00PM from Kashmiri Gate Bus Terminal adn that is when our jouyney to Grahan Village also began. The bus passed through major cities like Sonipat , Panipat ,Kurusheshtra and
-        Karnal. After 13hours long journey we finally reached Bhuntar. From Bhuntar , we catched a local bus to Kasol at early in the morning at 6:30AM . Even though it was morning , but Bus was full packed with passengers.</p>
-
-        <blockquote class="blockquote">
-          <img style="height: 300px" src="../../assets/images/articles/grahan.jpg"
-               alt="Generic placeholder image">
-          <footer class="blockquote-footer">Bhuntar
-          </footer>
-        </blockquote>
-
-        <p>We reached Kasol at 8:00PM. After getting fresh finally we fed ourself with maggi and some chocolates. And then our trek to Grahan village started.
-        In front of us, there was a dense forest and above a giant rocky mountain. I felt like they were waiting for us to show their splendid beauty.
-        </p>
-
-        <p>
-          The trails were full of twist and turns . Sometimes it pases through the rocky hills where putting your foot on the right place itself was a big challenge and sometimes it passes
-          along the tributires of Paravati river. The sound of the water in forest and hills was not less then anu musical concert. We fed lot of splendid views of majestic Himalayas to our eyes. We reached
-          Grahan around 2:30 PM.
-        </p>
-        <p>
-          First thing we did is we booked a home stay and given rest to our body. After two hours , we realize the place where we took rest was very different. There is no electricity in day time.
-          and building were completely constructed with wood. They don't even had ceiling fan. We totally disconnected from the rest of world because there is not internet , mobile network and even electricity.
-          The temprature changed dramatically at night. We felt like we entered in the month of december just after March. We stayed there for two days and witnessed the life of local people, the struggle they do for everything.
-        </p>
-        <p>
-          Trek to Grahan was truly a special journey. I took back lot of stories and beautiful memory of lovely people of Grahan.
-        </p>
-
-        <hr>
-
-
-        <ul class="nav nav-mytabs" id="myTab" role="tablist">
-
+        <ul  style="list-style-type: none;" class="nav nav-mytabs" id="myTab" role="tablist">
           <li class="nav-item">
             <a class="nav-link" id="history-tab" data-toggle="tab" href="#history" role="tab" aria-controls="history"
                aria-selected="false">Best time to Visit</a>
